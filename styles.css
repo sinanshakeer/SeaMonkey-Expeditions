@@ -1,0 +1,420 @@
+:root {
+    --accent-color: rgb(0, 102, 255);
+    --hover-color: darkorange;
+}
+
+* {
+    box-sizing: border-box;
+    /* border: 1px solid; */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.hero {
+    color: white;
+    background-image: url(./images/Rectangle\ 3.gif);
+    width: 100%;
+    height: 100vh;
+    max-height: 1080px;
+    min-height: 450px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar {
+    position: absolute;
+}
+
+.navbar-nav {
+    /* text-align: center; */
+    column-gap: 32px;
+    align-items: center;
+
+    a {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: white;
+        /* margin-right: 30px; */
+    }
+
+    .nav-link:hover {
+        transition: all .10s ease;
+        color: var(--hover-color);
+    }
+
+    .contact-btn {
+        max-width: max-content;
+        font-size: 1.3rem;
+        font-weight: 600;
+        border: none;
+        background-color: var(--accent-color);
+        padding: 3px 18px;
+        border-radius: 6px;
+        /* text-decoration: none; */
+    }
+
+    .contact-btn:hover {
+        background-color: var(--hover-color);
+        transition: all .10s ease;
+    }
+
+}
+
+.hero-text {
+    position: relative;
+    top: 80px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        font-family: cursive;
+        font-size: 5rem;
+        font-weight: 600;
+        margin-bottom: 1.1rem;
+        /* letter-spacing: .9rem; */
+    }
+
+    h2 {
+        font-family: cursive;
+        font-weight: 600;
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    p {
+        font-size: 1.7rem;
+    }
+
+    .hero-btn {
+        text-decoration: none;
+        color: white;
+        background-color: var(--accent-color);
+        padding: 8px 24px;
+        border-radius: 2em;
+    }
+
+    .hero-btn:hover {
+        background-color: var(--hover-color);
+        transition: all .10s ease;
+    }
+}
+
+.about-text {
+
+    h2 {
+        font-family: cursive;
+        font-size: 2rem;
+    }
+
+    h5 {
+        font-size: 1.4rem;
+        margin: 20px 0;
+    }
+}
+
+.expediction-section {
+    margin: 100px auto;
+
+    .expedition-header {
+        text-align: center;
+
+        h2 {
+            font-family: cursive;
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+    }
+
+    .card {
+
+        .img-wrapper {
+            border-radius: 1rem;
+            overflow: hidden;
+            position: relative;
+
+        }
+
+        .card-icon {
+            width: 50px;
+            position: absolute;
+            right: 0;
+        }
+
+        .card-title {
+            width: 70%;
+        }
+
+        .card-subtitle {
+            white-space: nowrap;
+            border-radius: .5rem;
+        }
+
+        .card-img-top {
+            transition: transform 0.5s ease;
+        }
+
+        .card-img-top:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    .expedition-footer {
+        text-align: center;
+        /* margin: 80px auto; */
+    }
+
+    .trips-btn {
+        text-decoration: none;
+        color: white;
+        background-color: var(--accent-color);
+        padding: 12px 24px;
+        border-radius: 5px;
+        /* margin: auto; */
+        transition: all .20s ease;
+    }
+
+    .trips-btn:hover {
+        background-color: var(--hover-color);
+    }
+}
+
+.adventure-category {
+    max-width: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    overflow-x: auto;
+    gap: 40px;
+    margin: 50px auto;
+
+    text-align: center;
+
+    .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        min-width: 110px;
+        height: 110px;
+        border-radius: 6px;
+        font-size: .9rem;
+        /* border: 1px solid darkorange; */
+
+        img {
+            width: 60%;
+            height: auto;
+        }
+    }
+
+    .item:hover {
+        border: 1px solid var(--hover-color);
+        color: var(--hover-color);
+    }
+
+    .all-trip {
+        border: 1px solid var(--hover-color);
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .camping img {
+        width: 50px;
+        margin: 6px;
+    }
+}
+
+.gallery-section {
+    background-color: black;
+    text-align: center;
+    color: white;
+    /* padding: 20px; */
+}
+
+.title {
+    font-family: cursive;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Place the images in the grid */
+.gallery img:nth-child(1) {
+    grid-row: 1 / span 2;
+    /* Big image spans two rows */
+    grid-column: 1;
+}
+
+.gallery img:nth-child(2) {
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.gallery img:nth-child(3) {
+    grid-row: 1;
+    grid-column: 3;
+}
+
+.gallery img:nth-child(4) {
+    grid-row: 2;
+    grid-column: 2 / span 3;
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+.gallery-btn {
+    text-decoration: none;
+    color: white;
+    background-color: var(--accent-color);
+    padding: 12px 24px;
+    border-radius: 5px;
+    margin: auto;
+    transition: all .20s ease;
+}
+
+.gallery-btn:hover {
+    background-color: var(--hover-color);
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .gallery img:nth-child(1),
+    .gallery img:nth-child(2),
+    .gallery img:nth-child(3),
+    .gallery img:nth-child(4) {
+        grid-column: auto;
+        grid-row: auto;
+    }
+}
+
+.faq-section {
+    text-align: center;
+    padding: 50px 10px;
+}
+
+.accordion {
+    button {
+        font-size: 1.2rem;
+    }
+}
+/* .accordion{
+    outline: 0;
+    border: 0;
+
+} */
+
+.contact-section {
+    background-image: url(./images/Dark\ mountain.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    img {
+        width: 100%;
+        min-height: 85%;
+        object-fit: cover;
+        
+    }
+}
+
+.contact {
+    box-shadow: 0px 4px 4px 0px rgba(23, 23, 23, 0.25);
+    backdrop-filter: blur(7px);
+    background: #ffffff00;
+}
+
+.contact-form {
+    /* max-width: 600px; */
+    color: rgb(255, 255, 255);
+
+    input {
+        width: 100%;
+        background-color: transparent;
+        /* padding: 8px; */
+        border: 0;
+        border-bottom: 1px solid rgb(255, 255, 255);
+        border-radius: 2px;
+        outline: 0;
+        color: white;
+    }
+
+    textarea {
+        height: 120px;
+        width: 100%;
+        background-color: transparent;
+        outline: 0;
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 5px;
+
+
+    }
+
+    button {
+        color: white;
+        background-color: var(--accent-color);
+        padding: 8px 32px;
+        border: 0;
+        border-radius: 5px;
+        margin: auto;
+        transition: all .20s ease;
+    }
+
+    button:hover {
+        background-color: var(--hover-color);
+    }
+}
+
+.whatsapp-icon {
+    position: fixed;
+    bottom: 90px;
+    right: 15px;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.footer-nav {
+
+    ul {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        flex-shrink: 1;
+        flex-wrap: wrap;
+        gap: 10px 30px;
+        font-size: 1.1rem;
+    }
+
+    li {
+        list-style-type: none;
+        transition: all .20s ease;
+    }
+
+    li:hover {
+        color: var(--hover-color);
+    }
+}
